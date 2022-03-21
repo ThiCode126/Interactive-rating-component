@@ -1,0 +1,136 @@
+#page {
+  height: 100vh;
+  @include flexCenter;
+
+  .card {
+    background: var(--black-gradient);
+    border-radius: 30px;
+    width: 327px;
+
+    h1 {
+      font-weight: 700;
+      @include text(24px, 30px);
+    }
+    p {
+      @include text(14px, 22px);
+      color: var(--light-grey);
+      @include mY(0);
+    }
+
+    &#rating {
+      padding: 24px 24px 32px;
+      .star {
+        @include wh(40px);
+        background: var(--dark-blue);
+        border-radius: 50%;
+        @include flexCenter;
+      }
+      h1 {
+        @include mY(16px, 17px);
+      }
+      .rating {
+        display: flex;
+        justify-content: space-between;
+        @include mY(24px);
+
+        .rating-btn {
+          @include wh(42px);
+          background: var(--dark-blue);
+          color: var(--medium-grey);
+          @include text(14px, 24px, 0.175px);
+          font-weight: 700;
+          border-radius: 50%;
+          @include flexCenter;
+          &.active {
+            background: var(--medium-grey);
+            color: var(--pure-white);
+          }
+          &:hover {
+            background: var(--orange);
+            color: var(--pure-white);
+          }
+        }
+      }
+      .submit {
+        @include flexCenter;
+        @include text(14px, 18px, 1.86667px);
+        text-transform: uppercase;
+        background: var(--orange);
+        height: 45px;
+        border-radius: 22.5px;
+        &:hover {
+          color: var(--orange);
+          background: var(--pure-white);
+        }
+      }
+    }
+    &#thank {
+      padding: 34px 24px 37px;
+      text-align: center;
+
+      h1 {
+        @include mY(24px, 17px);
+      }
+
+      .note {
+        background: var(--dark-blue);
+        color: var(--orange);
+        border-radius: 22.5px;
+        width: fit-content;
+        margin: 24px auto;
+        padding: 5px 12px;
+      }
+    }
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  #page {
+    .card {
+      width: 412px;
+
+      h1 {
+        @include text(28px, 35px);
+      }
+      p {
+        @include text(15px, 24px);
+      }
+
+      &#rating {
+        padding: 32px 39px 32px 32px;
+        .star {
+          @include wh(48px);
+        }
+
+        h1 {
+          @include mY(30px, 15px);
+        }
+        .rating {
+          margin-bottom: 32px;
+
+          .rating-btn {
+            @include wh(51px);
+            @include text(16px, 24px, 0.2px);
+          }
+        }
+        .submit {
+          @include text(15px, 19px, 2px);
+        }
+      }
+      &#thank {
+        padding: 45px 40px 45px 32px;
+
+        .note {
+          margin: 36px auto;
+          padding: 4px 20px;
+        }
+        h1 {
+          @include mY(32px, 7px);
+        }
+      }
+    }
+  }
+}

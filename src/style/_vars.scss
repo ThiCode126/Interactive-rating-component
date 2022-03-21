@@ -1,8 +1,11 @@
 :root {
-  --white: #fff;
-  --dark: #070724;
-  --dark-grey: #38384f;
-  --light-grey: #838391;
+  --pure-white: #fff;
+  --dark-blue: #262e38;
+  --very-dark-blue: #131518;
+  --light-grey: #969fad;
+  --medium-grey: #7c8798;
+  --orange: #fc7614;
+  --black-gradient: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
 }
 
 @mixin text($font, $line: $font, $ls: normal) {
