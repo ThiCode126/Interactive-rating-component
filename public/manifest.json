@@ -3,13 +3,13 @@
   "name": "Portfolio ThiCode with ReactJs",
   "icons": [
     {
-      "src": "/assets/icon.png",
+      "src": "assets/icon.png",
       "type": "image/png",
-      "sizes": "1024x1024"
+      "sizes": "32x32"
   }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#fff",
+  "background_color": "#131518"
 }
